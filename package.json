@@ -1,0 +1,47 @@
+{
+    "name": "rest-api-boilerplate",
+    "version": "1.0.0",
+    "description": "Typescript REST API Boilerplate",
+    "main": "api/src/server.ts",
+    "scripts": {
+        "serve": "npm run build && npm run start",
+        "start": "node .build/api/src/server.js",
+        "build": "rm -rf .build/ && prettier --write ./api && tsoa spec-and-routes && tsc",
+        "test:unit": "ENV_FILE=./config/.env.test jest"
+    },
+    "keywords": [],
+    "repository": {
+        "url": "https://github.com/tavukcobani/typescript-rest-api-boilerplate"
+    },
+    "author": "tavukcobani",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/body-parser": "1.19.5",
+        "@types/cors": "2.8.17",
+        "@types/express": "4.17.21",
+        "@types/jest": "29.5.12",
+        "@types/swagger-jsdoc": "6.0.4",
+        "@types/swagger-ui-express": "4.1.6",
+        "concurrently": "8.2.2",
+        "jest": "29.7.0",
+        "nodemon": "3.1.4",
+        "prettier": "3.3.3",
+        "ts-jest": "29.2.4",
+        "ts-node": "10.9.2",
+        "typescript": "5.5.4"
+    },
+    "dependencies": {
+        "@types/jsonwebtoken": "9.0.6",
+        "azure-ad-jwt-lite": "1.2.1",
+        "body-parser": "1.20.2",
+        "cors": "2.8.5",
+        "dotenv": "16.4.5",
+        "express": "4.19.2",
+        "pg": "8.12.0",
+        "reflect-metadata": "0.2.2",
+        "swagger-jsdoc": "6.2.8",
+        "swagger-ui-express": "5.0.1",
+        "tsoa": "6.4.0",
+        "typeorm": "0.3.20"
+    }
+}

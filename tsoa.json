@@ -1,0 +1,23 @@
+{
+    "entryFile": "api/src/server.ts",
+    "noImplicitAdditionalProperties": "throw-on-extras",
+    "controllerPathGlobs": ["api/src/**/*.controller.ts"],
+    "spec": {
+        "securityDefinitions": {
+            "jwt": {
+                "type": "apiKey",
+                "name": "Authorization",
+                "in": "header"
+            }
+        },
+        "outputDirectory": ".build",
+        "specVersion": 3
+    }, 
+    "routes": {
+        "basePath": "/",
+        "entryFile": "api/src/server.ts",
+        "routesDir": "api/src/routes",
+        "middleware": "express",
+        "authenticationModule": "api/src/middlewares/authHandler.middleware.ts"
+    }
+}
